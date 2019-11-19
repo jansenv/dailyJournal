@@ -1,0 +1,8 @@
+.basics {
+    display: flex;
+    flex-direction: column;
+}
+
+.button-styling {
+    margin: 5px;
+}
