@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,9 +8,10 @@
     <title>Document</title>
     <link rel="stylesheet" type="text/css" href="styles/main.css">
 </head>
+
 <body>
     <h1>Daily Journal</h1>
-    <form action ="">
+    <form action="">
         <fieldset>
             <label class="basics" for="journalDate">Date of entry</label>
             <input type="date" name="journalDate" id="journalDate">
@@ -30,7 +32,7 @@
     <form>
         <fieldset>
             <label class="basics" for="mood">Mood for the day</label>
-            <select name ="mood" id="mood">
+            <select name="mood" id="mood">
                 <option value="Fine">Fine</option>
                 <option value="Happy">Happy</option>
                 <option value="Sad">Sad</option>
@@ -40,5 +42,8 @@
     <form>
         <input class="button-styling" type="button" name="record" id="record" value="Record Journal Entry">
     </form>
+    <div id="entryLog"></div>
+    <script type="module" src="scripts/main.js"></script>
 </body>
+
 </html>
