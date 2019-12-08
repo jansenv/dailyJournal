@@ -3,8 +3,8 @@
  *           HTML representation of the data
  */
 
-const JournalEntryComponent = (entry) => {
-    return `
+const JournalEntryComponent = entry => {
+  return `
         <section id="entry--${entry.id}" class="journalEntry">
             <div class="bolded">${entry.concept}</div>
             <br>
@@ -12,7 +12,7 @@ const JournalEntryComponent = (entry) => {
             <div>${entry.date}</div>
             <br>
         </section>
-    `
-}
+    `;
+};
 
 export default JournalEntryComponent;

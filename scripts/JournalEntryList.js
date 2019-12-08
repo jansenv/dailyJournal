@@ -1,5 +1,5 @@
-import { useJournalEntries } from "./JournalDataProvider.js"
-import JournalEntryComponent from "./JournalEntry.js"
+import { useJournalEntries } from "./JournalDataProvider.js";
+import JournalEntryComponent from "./JournalEntry.js";
 
 /*
  *  Purpose:
@@ -8,22 +8,20 @@ import JournalEntryComponent from "./JournalEntry.js"
  *    data provider component
  */
 
- // DOM reference to where all entries will be rendered
-const entryLog = document.querySelector("#entryLog")
+// DOM reference to where all entries will be rendered
+const entryLog = document.querySelector("#entryLog");
 
 const EntryListComponent = () => {
-    // Use the journal entry data from the data provider component
-    const entries = useJournalEntries()
+  // Use the journal entry data from the data provider component
+  const entries = useJournalEntries();
 
-    entryLog.innerHTML += `
-    ${
-        entries.map(
-            (entry) => {
-                return JournalEntryComponent(entry)
-            }
-        ).join("")
-    }
-    `
-}
+  entryLog.innerHTML += `
+    ${entries
+      .map(entry => {
+        return JournalEntryComponent(entry);
+      })
+      .join("")}
+    `;
+};
 
-export default EntryListComponent
+export default EntryListComponent;
