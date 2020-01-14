@@ -1,6 +1,6 @@
 let journal = [];
 
-export const getJournaEntries = () => {
+export const getJournalEntries = () => {
   return fetch("http://localhost:3000/entries")
   .then(res => {
     return res.json()
@@ -8,6 +8,16 @@ export const getJournaEntries = () => {
   .then(entries => {
     return (journal = entries.slice())
   })
+}
+
+export const saveJournalEntry = entry => {
+  return fetch("http://localhost:3000/entries", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify(entry)
+  }).then(getJournalEntries)
 }
 
 /*

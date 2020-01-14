@@ -1,24 +1,32 @@
 {
-    "entries": [
-        {
-            "id": 1,
-            "date": "11/25/2019",
-            "concept": "Automation",
-            "entry": "We learned about automating HTML representations and event listeners. The power generator then blew up, providing convenient cover for my escape from this hellish abyss.","mood": "Ok"
-        },
-        {
-            "id": 2,
-            "date": "11/21/2019",
-            "concept": "GitHub",
-            "entry": "We learned how to use GitHub on a team and finished our first group project. It was difficult but rewarding to learn so many new valuable things, and I came away with a great sense of achievement.",
-            "mood": "Cautiously optimistic"
-        },
-        {
-            "id": 3,
-            "date": "11/22/2019",
-            "concept": "Professional grade JavaScript",
-            "entry": "Things are now in motion that cannot be undone.",
-            "mood": "Fatal"
-        }
-    ]
+  "entries": [
+    {
+      "id": 1,
+      "date": "11/25/2019",
+      "concept": "Automation",
+      "entry": "We learned about automating HTML representations and event listeners. The power generator then blew up, providing convenient cover for my escape from this hellish abyss.",
+      "mood": "Ok"
+    },
+    {
+      "id": 2,
+      "date": "11/21/2019",
+      "concept": "GitHub",
+      "entry": "We learned how to use GitHub on a team and finished our first group project. It was difficult but rewarding to learn so many new valuable things, and I came away with a great sense of achievement.",
+      "mood": "Cautiously optimistic"
+    },
+    {
+      "id": 3,
+      "date": "11/22/2019",
+      "concept": "Professional grade JavaScript",
+      "entry": "Things are now in motion that cannot be undone.",
+      "mood": "Fatal"
+    },
+    {
+      "date": "2020-01-13",
+      "concept": "Test",
+      "entry": "this is not a drill ladies and gents",
+      "mood": "Happy",
+      "id": 4
+    }
+  ]
 }

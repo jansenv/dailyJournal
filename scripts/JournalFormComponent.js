@@ -1,4 +1,22 @@
+import { saveJournalEntry } from "./JournalDataProvider.js"
+
 const contentTarget = document.querySelector(".form")
+const eventHub = document.querySelector(".content")
+
+eventHub.addEventListener("click", clickEvent => {
+    if (clickEvent.target.id === "record") {
+        const newEntry = {
+            date: document.querySelector("#journalDate").value,
+            concept: document.querySelector("#concepts").value,
+            entry: document.querySelector("#entry").value,
+            mood: document.querySelector("#mood").value
+        }
+
+        saveJournalEntry(newEntry)
+    }
+})
+
+
 
 export const JournalFormComponent = () => {
     
@@ -18,7 +36,7 @@ export const JournalFormComponent = () => {
         <form>
             <fieldset>
                 <label class="basics" for="journalEntry">Journal Entry</label>
-                <textarea name="journalEntry"></textarea>
+                <textarea name="journalEntry" id="entry"></textarea>
             </fieldset>
         </form>
         <form>
