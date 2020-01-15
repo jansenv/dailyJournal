@@ -13,13 +13,17 @@ eventHub.addEventListener("click", clickEvent => {
         }
 
         saveJournalEntry(newEntry)
+        .then(
+            () => {
+                const message = new CustomEvent("journalEntryCreated")
+                eventHub.dispatchEvent(message)
+            }
+        )
     }
 })
 
-
-
 export const JournalFormComponent = () => {
-    
+
     contentTarget.innerHTML += `
         <form action="">
             <fieldset>
@@ -53,5 +57,5 @@ export const JournalFormComponent = () => {
             <input class="button-styling" type="button" name="record" id="record" value="Record Journal Entry">
         </form>
     `
-    
+
 }

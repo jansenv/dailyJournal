@@ -4,5 +4,4 @@ import { JournalFormComponent } from "./JournalFormComponent.js";
 
 JournalFormComponent()
 getJournalEntries()
-    .then(useJournalEntries)
     .then(EntryListComponent)
