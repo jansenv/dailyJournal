@@ -27,6 +27,13 @@
       "entry": "this is not a drill ladies and gents",
       "mood": "Happy",
       "id": 4
+    },
+    {
+      "date": "1999-01-01",
+      "concept": "i think it works now",
+      "entry": "pizza lol",
+      "mood": "Happy",
+      "id": 5
     }
   ]
 }

@@ -20,19 +20,20 @@ const EntryListComponent = () => {
   }
 
   eventHub.addEventListener("journalEntryCreated", event => {
-    getJournalEntries()
-    .then(renderEntriesAgain)
+    renderEntriesAgain()
   })
 
-  const render = (journalEntry) => {
-    entryLog.innerHTML += `
-    ${journalEntry
+  const render = (journalEntries) => {
+    entryLog.innerHTML = `
+    ${journalEntries
       .map(entry => {
         return JournalEntryComponent(entry);
       })
       .join("")}
     `;
   }
+
+  render(useJournalEntries())
 
 };
 
