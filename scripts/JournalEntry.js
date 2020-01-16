@@ -7,10 +7,9 @@ const JournalEntryComponent = entry => {
   return `
         <section id="entry--${entry.id}" class="journalEntry">
             <div class="bolded">${entry.concept}</div>
-            <br>
             <div>${entry.entry}</div>
             <div>${entry.date}</div>
-            <br>
+            <button id="deleteNote--${entry.id}">Delete</button>
         </section>
     `;
 };

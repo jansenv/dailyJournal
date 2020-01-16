@@ -20,6 +20,12 @@ export const saveJournalEntry = entry => {
   }).then(getJournalEntries)
 }
 
+export const deleteJournalEntry = entryId => {
+  return fetch(`http://localhost:3000/entries/${entryId}`, {
+    method: "DELETE"
+  }).then(getJournalEntries)
+}
+
 /*
     You export a function that provides a version of the
     raw data in the format that you want
