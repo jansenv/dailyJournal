@@ -1,4 +1,4 @@
-import { useJournalEntries, getJournalEntries, deleteJournalEntry } from "./JournalDataProvider.js";
+import { useJournalEntries, deleteJournalEntry } from "./JournalDataProvider.js";
 import JournalEntryComponent from "./JournalEntry.js";
 
 /*
@@ -14,9 +14,27 @@ const eventHub = document.querySelector(".content")
 
 const EntryListComponent = () => {
 
+  eventHub.addEventListener("entryHasBeenEdited", event => {
+    const updatedEntries = useJournalEntries()
+    render(updatedEntries)
+  })
+
   eventHub.addEventListener("click", clickEvent => {
-    if (clickEvent.target.id.startsWith("deleteNote--")) {
+    if (clickEvent.target.id.startsWith("editEntry--")) {
+      const [notUsed, entryId] = clickEvent.target.id.split("--")
+
+      const message = new CustomEvent("editButtonClicked", {
+        detail: {
+          entryId: entryId
+        }
+      })
+
+      eventHub.dispatchEvent(message)
+    }
+
+    if (clickEvent.target.id.startsWith("deleteEntry--")) {
       const [prefix, id] = clickEvent.target.id.split("--")
+      
       deleteJournalEntry(id).then(
         () => {
           const updatedEntries = useJournalEntries()
@@ -24,6 +42,7 @@ const EntryListComponent = () => {
         }
       )
     }
+
   })
 
   const renderEntriesAgain = () => {
